@@ -1,0 +1,28 @@
+{
+    "intents":
+    [
+        {
+          "tag": "wishes",
+          "patterns" : ["Hi honey","whats up","babe are you up"],
+          "responses" : ["Hey sweethear","Angel I am here", "Hi there!"],
+          "context" : [""]
+        },
+        {
+            "tag":"byes",
+            "patternts" : ["gtg","bye see you later","goodnight"],
+            "responses" : ["oh no dont leave", "okay cheap dreams","come back ill be waiting"],
+            "context" : [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns" : ["thankyou so much", "thanks"],
+            "responses" : ["my pleasure", "your wlc"],
+            "context" : [""]
+        },
+        {
+            "tag" : "queries",
+            "patterns" : ["what is my life come down to "],
+            "responses" : ["Your life is beautiful and is filled with the most flattering people for you!"],
+            "context" : [""]
+        }
+    ]
