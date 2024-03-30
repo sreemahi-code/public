@@ -1,0 +1,21 @@
+Making a chatbot
+Terminal Lines
+python3 -m venv chatbott //we used to make a virtual environment of python 3 and the folders name
+chatbott/bin/activate // to activate the bin or the scripts of the chatbott python
+pip install numpy
+pip install tensorflow
+pip install nltk //natural language tool kit
+
+
+
+Lemmatization
+Reducing a word to its root word 
+Eg: running -> run
+      walked->walk
+      runs -> run 
+    words, such as "better" might be broken down to a lemma such as "good."
+Difference bw lemmatization and stemming 
+Stemming just removes the prefix or suffix for eg studies - > studi but for lemma study will be the o/p 
+Stemming is faster but inaccurate
+open('intents.json').read(): This opens the file named intents.json in the current directory and reads its contents as a string
+json.loads(): This function is used to deserialize a JSON string into a Python dictionary. It takes a JSON string as input and returns the corresponding Python dictionary.
