@@ -56,6 +56,6 @@ model = tf.keras.Sequential()
 
 model.add(tf.keras.layer.Dense(128, input_shape(len(trainX[0]), ),activation = 'relu'))
 model.add(tf.keras.Dropout(0.5))
-model.add(tf.keras.layers.Denae(64, activation = 'relu'))
+model.add(tf.keras.layers.Dense(64, activation = 'relu'))
 model.add(tf.keras.layers.Dense (len(trainY[0], activation = 'softmax'))
           
