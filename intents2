@@ -9,7 +9,7 @@
         },
         {
             "tag":"byes",
-            "patternts" : ["gtg","bye see you later","goodnight"],
+            "patterns" : ["gtg","bye see you later","goodnight"],
             "responses" : ["oh no dont leave", "okay cheap dreams","come back ill be waiting"],
             "context" : [""]
         },
