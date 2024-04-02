@@ -5,9 +5,9 @@ import numpy as np
 import tensorflow as tf 
 
 import nltk 
-from nltk.stem import WorldNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 
-lemmatizer = WorldNetLemmatizer()
+lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents.json').read())
 
@@ -18,11 +18,11 @@ ignoreLetters = ['?','!','.',',']
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
-    wordList = nltk.word_tokenize(pattern)
-    words.extend(wordList)
-    documents.append((wordList, intent['tag']))
-    if intent['tag'] not in classes:
-        classes.append(intent['tag'])
+        wordList = nltk.word_tokenize(pattern)
+        words.extend(wordList)
+        documents.append((wordList, intent['tag']))
+        if intent['tag'] not in classes:
+            classes.append(intent['tag'])
     
 words = [lemmatizer.lemmatize(word)for word in words if word not in ignoreLetters]
 words = sorted(set(classes))
@@ -49,7 +49,7 @@ random.shuffle(training)
 training = np.array(training)
 
 trainX = training[: , :len(words)]
-trainY = traning [ ;, : len(words)]
+trainY = traning [ :, : len(words)]
 
 
 model = tf.keras.Sequential()
