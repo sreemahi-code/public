@@ -19,3 +19,33 @@ Stemming just removes the prefix or suffix for eg studies - > studi but for lemm
 Stemming is faster but inaccurate
 open('intents.json').read(): This opens the file named intents.json in the current directory and reads its contents as a string
 json.loads(): This function is used to deserialize a JSON string into a Python dictionary. It takes a JSON string as input and returns the corresponding Python dictionary.
+
+for intent in intents['intents']: //looping for intent in intents
+    for pattern in intent['patterns']: // going through patterns in that intnet
+    wordList = nltk.word_tokenize(pattern)/ /wordList variable contains all the pattern words tokenized that is separated with a common attribute like comma or full stop or something like that , nltk is a library used for the nl works
+    words.extend(wordList) //adds the wordList values into the world list , extend() so that we can add iteratively and like adds another list where else append just adds a certain element
+ documents.append((wordList, intent['tag']))// adds a new document to the documents list, containing the tokenized words and the intent tag associated with the current pattern.  Tokenized words and its tag
+if intent['tag'] not in classes:            // classes is the list that has all the intent names
+        classes.append(intent['tag'])
+
+    
+words = [lemmatizer.lemmatize(word)for word in words if word not in ignoreLetters]
+→ lemmatizes the words in the list word (gets it back to its root words) if not in the ignoreLetters list and put in the words list
+    words = sorted(set(classes))
+→ classes are made into a set( a list with no repeating values) and are sorted into the words list
+This operation is useful when you need a list of unique elements sorted in a specific order. In the context of your previous messages, if classes contained unique intent tags, this line would ensure that words holds a sorted list of these tags without any duplicates.
+
+random.shuffle(training)
+training = np.array(training)
+
+//This is to shuffle and randomize the data before training a model
+
+
+
+
+activation='relu' sets the activation function for the layer to Rectified Linear Unit (ReLU).
+ReLU positive values are the same and the negative values are changed to 0
+
+https://www.youtube.com/watch?v=CqOfi41LfDw&list=PLblh5JKOoLU
+ACTIVATION FUNCTIONS are used to figure out the neural network graph node design among softplus(curved line), reLU( _/) and sigmoid (S) 
+
