@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import nltk
 
-from ntlk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
 lemmatizer = WordNetLemmatizer(0)
