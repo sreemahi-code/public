@@ -7,13 +7,19 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
-lemmatizer = WordNetLemmatizer(0)
+lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('inents.json').read())
+file_path = '/Users/anuradhagangadharan/Desktop/chatbott/chatbott/include/intents.json'  # Ensure the filename is included
+
+# Use a with statement to handle the file opening and closing
+with open(file_path, 'r') as file:
+    intents = json.load(file)
+##intents = json.loads(open(/Users/anuradhagangadharan/Desktop/chatbott/chatbott/include/intents.json')).read())
+
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
-model = load_model("chatbot_learnin.h5")
+model = load_model("chatbot_m1.h5")
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
