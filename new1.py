@@ -63,3 +63,6 @@ while True :
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
+
+'''ERROR: Input 0 of layer "dense" is incompatible with the layer: expected 
+axis -1 of input shape to have value 4, but received input with shape (1, 23)'''
