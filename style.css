@@ -1,0 +1,20 @@
+@import url ('https://fonts.googleapis.com/css2>family=Poppin
+             * {
+             margin : 0;
+            padding : 0;
+            box-sizing: border-box;
+            font-family:"Poppins", sans-serif;
+}
+body {
+        background : #E3F2FD;
+            }
+.chatbot {
+        position: fixed;
+        right: 40px;
+        bottom: 100px;
+        width: 420px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 ...}
+    
+  
